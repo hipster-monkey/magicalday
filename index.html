@@ -339,6 +339,55 @@
     color: var(--soft-white); max-width: 560px; margin: 0 auto 3rem;
   }
 
+  .read-again-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding: 1.2rem 2.5rem;
+    background: transparent;
+    border: 1px solid rgba(232, 212, 255, 0.4);
+    border-radius: 999px;
+    color: var(--ivory);
+    cursor: pointer;
+    font-family: 'Italiana', serif;
+    transition: all 0.5s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .read-again-btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(212, 181, 240, 0.15), rgba(240, 196, 224, 0.15));
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  .read-again-btn:hover {
+    border-color: var(--lilac);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 40px rgba(183, 143, 219, 0.3);
+  }
+  .read-again-btn:hover::before { opacity: 1; }
+  .read-again-label {
+    font-size: 0.75rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--ivory);
+    position: relative;
+    z-index: 1;
+  }
+  .read-again-arrow {
+    font-size: 1rem;
+    color: var(--lilac);
+    position: relative;
+    z-index: 1;
+    transition: transform 0.4s ease;
+  }
+  .read-again-btn:hover .read-again-arrow {
+    transform: translateY(-3px);
+  }
+
   @keyframes rise { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
   @keyframes reveal_in { 0% { opacity: 0; } 100% { opacity: 1; } }
 
@@ -380,7 +429,7 @@
   <!-- 1. HERO -->
   <section class="hero">
     <div class="container">
-      <div class="eyebrow">A Letter Written In Love</div>
+      <div class="eyebrow">A Letter Written In Light</div>
       <h1 class="hero-title">
         Almost time,
         <span class="magic">my magic</span>
@@ -412,14 +461,14 @@
         and the universe took notes.
       </h2>
       <p class="prose prose-large">
-        Karishma. <em>Magic, A wonder, A miracle that  is made real.</em>
-        Out of all the names in all the languages, this was the only one
-        the world could give you, because no other word would have been enough.
+        Karishma. <em>A miracle. A wonder. Magic, made real.</em>
+        Of all the names in all the languages, yours was the only one
+        the world could give you, because no other word would have been honest.
       </p>
       <p class="prose">
-        You are that calming silence before a song begins.
-        You are the small, impossible joy of finding your favorite line in a book you've read.
-        You are every good thing together at once.
+        You are the soft hush before a song begins.
+        You are the small, impossible joy of finding your favorite page in a book you've already read.
+        You are every good thing arriving at once.
       </p>
     </div>
   </section>
@@ -433,7 +482,7 @@
         of us.
       </h2>
       <p class="prose">
-        Other people have ordinary lives. We have a museum of weird things,
+        Other people have ordinary lives. We have a museum of tiny rituals,
         and most of them don't make any sense, and that's exactly why I love them.
       </p>
 
@@ -446,7 +495,7 @@
             Late nights. The deck shuffled. You winning. Always you winning.
             Through some unexplainable phenomenon of the universe, never anything else.
             Definitely not cheating. Wink. <em>Wink.</em>
-            One day I'll catch you in middle of it again, and again I'll just laugh and let you have it.
+            One day I'll catch you mid sleight of hand, and even then I think I'll just laugh and let you have it.
           </p>
         </div>
 
@@ -455,8 +504,8 @@
           <h3 class="moment-title">Conversations that make zero sense</h3>
           <p class="moment-body">
             Half our talks would not survive a transcript.
-            3 AM theories. Sentences that loop back into themselves.
-            Whole debates about nothing, won by no one.
+            Three a.m. theories. Sentences that loop back into themselves.
+            Whole arguments about nothing, won by no one.
             <em>And somehow, those are the ones I remember best.</em>
           </p>
         </div>
@@ -486,9 +535,9 @@
           <span class="moment-label">✦ Five</span>
           <h3 class="moment-title">The list of wild things</h3>
           <p class="moment-body">
-            Your fantasies. Your wishlists. The slightly chaotic list of dreams.
+            Your fantasies. Your wishlists. The slightly chaotic notes app of dreams.
             We're going through them, one by one, in no particular order, with no end in sight.
-            <em>Take your time, love. I'm in no hurry. I have the rest of the list to get to.</em>
+            <em>Take your time, magic. I'm in no hurry. I have the rest of the list to get to.</em>
           </p>
         </div>
 
@@ -507,7 +556,7 @@
           <span class="moment-label">✦ Seven</span>
           <h3 class="moment-title">Pink magic in a parking lot</h3>
           <p class="moment-body">
-            Near Raffa. Random cars. No witness. Pink magic.
+            Near Raffa. Engine off. Windows down. Pink magic.
             <em>Some of the best moments of my life have happened in that exact parking lot.</em>
             Not in any city. Not in any apartment. Right there.
           </p>
@@ -518,8 +567,8 @@
           <h3 class="moment-title">Subway sandwiches at Ibis One Central</h3>
           <p class="moment-body">
             Of all the restaurants in this city. Of all the places we could be.
-            Sandwiches. At an Ibis Subway. <em>And somehow, I wouldn't trade that hotel bences for any candlelit dinner in the world.</em>
-            love is a combo meal with no olives.
+            Sandwiches. At an Ibis. <em>And somehow, I wouldn't trade that hotel lobby for any candlelit dinner in the world.</em>
+            Romance is a footlong with extra olives, apparently.
           </p>
         </div>
 
@@ -575,7 +624,7 @@
         </blockquote>
         <blockquote class="wish">
           <span class="wish-label">Third</span>
-          <p class="wish-text">Every ghost you wish to meet, every djinn story that gives you goosebumps, and one Korean man with the cheekbones of your choosing.</p>
+          <p class="wish-text">Every ghost you wish to meet, every djinn story that gives you goosebumps, and one (1) Korean man with the cheekbones of your choosing, fictional preferred.</p>
         </blockquote>
         <blockquote class="wish">
           <span class="wish-label">Fourth</span>
@@ -591,7 +640,7 @@
         </blockquote>
         <blockquote class="wish">
           <span class="wish-label">Seventh</span>
-          <p class="wish-text">A whole pile of unfinished shows. We'll finish them. (We probably won't.)</p>
+          <p class="wish-text">A whole pile of unfinished shows. We'll get to them. (We won't.) (And it'll be perfect.)</p>
         </blockquote>
         <blockquote class="wish">
           <span class="wish-label">And, always</span>
@@ -623,7 +672,7 @@
 
       <p class="prose prose-large">
         So tonight, when the clock turns and your day begins,
-        know that everywhere, everything in the world is rooting for you.
+        know that somewhere, every soft thing in the world is rooting for you.
         And so am I. <em>Always.</em>
       </p>
 
@@ -631,6 +680,11 @@
         <p class="signature-line">happy almost birthday, my magic</p>
         <p class="signature-mark">with all of me ♡</p>
       </div>
+
+      <button class="read-again-btn" id="openRevealBtn" type="button" style="margin-top: 3.5rem;">
+        <span class="read-again-label">open your gift</span>
+        <span class="read-again-arrow">♡</span>
+      </button>
     </div>
   </section>
 
@@ -650,39 +704,52 @@
     </p>
     <div class="ornament-divider" style="opacity: 1; transform: none;"><span>♡</span></div>
     <p class="reveal-message" style="font-size: 1.1rem;">
-      Welcome to your year, my magical weirdo.
+      Welcome to your year, beautiful.
     </p>
+    <button class="read-again-btn" id="readAgainBtn" type="button">
+      <span class="read-again-label">read the letter again</span>
+      <span class="read-again-arrow">↑</span>
+    </button>
   </div>
 </div>
 
 <script>
-  function getDubaiMidnightTarget() {
-    const now = new Date();
-    const dubaiNow = new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Dubai' }));
-    const nextDubaiMidnight = new Date(dubaiNow);
-    nextDubaiMidnight.setHours(24, 0, 0, 0);
-    return new Date(now.getTime() + (nextDubaiMidnight - dubaiNow));
-  }
-
-  let targetDate = getDubaiMidnightTarget();
+  /* ===========================================================
+     BIRTHDAY MOMENT: May 7, 2026 at 00:00 Dubai time (UTC+4)
+     This is a fixed timestamp so the countdown points to ONE
+     specific moment, not "the next midnight" on a loop.
+     If you ever change the date, update the ISO string below.
+     UTC+4 means Dubai midnight = the previous day at 20:00 UTC.
+     So May 7 00:00 Dubai = May 6 20:00 UTC.
+     =========================================================== */
+  const targetDate = new Date('2026-05-06T20:00:00Z');
   const elDays    = document.getElementById('days');
   const elHours   = document.getElementById('hours');
   const elMinutes = document.getElementById('minutes');
   const elSeconds = document.getElementById('seconds');
   const reveal    = document.getElementById('reveal');
+  const readAgainBtn = document.getElementById('readAgainBtn');
 
   function pad(n) { return String(n).padStart(2, '0'); }
   let revealed = false;
+  let tickInterval = null;
+
+  function triggerReveal(withSparkles) {
+    if (revealed) return;
+    revealed = true;
+    reveal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    if (tickInterval) {
+      clearInterval(tickInterval);
+      tickInterval = null;
+    }
+    if (withSparkles) burstSparkles();
+  }
 
   function tick() {
     const diff = targetDate - new Date();
     if (diff <= 0) {
-      if (!revealed) {
-        revealed = true;
-        reveal.classList.add('active');
-        burstSparkles();
-        document.body.style.overflow = 'hidden';
-      }
+      triggerReveal(true);
       return;
     }
     const d = Math.floor(diff / 86400000);
@@ -695,8 +762,30 @@
     elSeconds.textContent = pad(s);
   }
 
-  tick();
-  setInterval(tick, 1000);
+  /* If the date has already passed when she opens the page,
+     skip straight to the reveal (no sparkle burst on first open,
+     since she may have already seen it). */
+  if (targetDate - new Date() <= 0) {
+    triggerReveal(false);
+  } else {
+    tick();
+    tickInterval = setInterval(tick, 1000);
+  }
+
+  /* "Read the letter again" — close the overlay and scroll to the top */
+  readAgainBtn.addEventListener('click', () => {
+    reveal.classList.remove('active');
+    document.body.style.overflow = '';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  /* "Open your gift" — re-trigger the reveal from the bottom of the letter */
+  const openRevealBtn = document.getElementById('openRevealBtn');
+  openRevealBtn.addEventListener('click', () => {
+    reveal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    burstSparkles();
+  });
 
   function spawnStars() {
     for (let i = 0; i < 70; i++) {
